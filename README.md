@@ -1,0 +1,2 @@
+# stonkcollector
+collecting stonks
