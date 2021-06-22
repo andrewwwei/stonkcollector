@@ -20,7 +20,7 @@ class Logger:
     def close(self):
         self.file.close()
 
-class TransationLogger(Logger):
+class TransactionLogger(Logger):
     def __init__(self):
         super().__init__(self.current_date(), dir="logs")
 
