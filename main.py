@@ -1,4 +1,5 @@
 from collector import *
+from data_processing import *
 from ta.momentum import RSIIndicator
 
 def main():
@@ -9,9 +10,7 @@ def main():
     # do stuff with data
     # probably (1) compute indicators; (2) train model
     df = data_list[0]
-    r = RSIIndicator(df.iloc[:, 3], window=10)
-    print(df.iloc[:, 3])
-    print(r.rsi())
+    print(getRSI(df))
 
 if __name__ == "__main__":
     main()
