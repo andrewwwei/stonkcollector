@@ -10,7 +10,7 @@ def main():
     # do stuff with data
     # probably (1) compute indicators; (2) train model
     df = data_list[0]
-    print(getRSI(df))
+    print(rsi(df))
 
 if __name__ == "__main__":
     main()

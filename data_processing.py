@@ -18,3 +18,15 @@ def adl(df):
 def adx(df):
     a = ADXIndicator(df.iloc[:, 2], df.iloc[:, 3], df.iloc[:, 4])
     return a.adx()
+
+def output_labels(df):
+    r = rsi(df)
+    labels = []
+    mult = 1.002
+    shift = 5
+    for i in range(10, len(r) - shift):
+        if r[i] < 20 and r[i + shift] > mult * r[i]:
+            labels.append(1)
+        else:
+            labels.append(0)
+    return labels
