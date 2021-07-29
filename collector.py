@@ -14,7 +14,7 @@ class HistDataCollector:
         for t in self.tokens:
             pair = (t + "usdt").upper()
             f = open("data/{}.csv".format(t), "w+")
-            data = self.client.get_historical_klines(pair, Client.KLINE_INTERVAL_15MINUTE, start_str=0)
+            data = self.client.get_historical_klines(pair, Client.KLINE_INTERVAL_3MINUTE, start_str=0)
             for x in data:
                 n = 11
                 for i in range(0, n):
